@@ -1,0 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for nav links */
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 255, 255, 0.2), rgba(0, 0, 0, 0.8));
+  padding: 20px;
+  z-index: 1;
+  border-right: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 20px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+  background: rgba(0, 255, 255, 0.3);
+  transform: translateX(5px);
+  color: #0ff;
+}
+
+.sidebar-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.section {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  margin-left: 220px; /* Align with sidebar */
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0 30px; /* Padding on sides for symmetry */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+.section .content {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.119);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #00ffff4d;
+  text-align: center; /* Ensure text inside content is centered */
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.title-section .content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffffff, #e0f7fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.title-section .content p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: text-shadow 0.3s;
+}
+
+h2:hover {
+  text-shadow: 0 0 10px #0ff;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+p, li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section-img {
+  max-width: 35%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.iconquantum {
+  width: 40%;
+  height: 40%;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bulletins{
+  justify-content: left;
+  align-items: right;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.bulletins1{
+  justify-content: left;
+  align-items: right;
+  text-align: left;
+  padding-left: 3%;
+}
+
+.iconsolar {
+  width: 40%;
+  height: 40%;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.iconquantum:hover, .iconsolar:hover {
+  transform: scale(1.1);
+}
+
+.iconinto{
+  padding-bottom: 100px;
+  width: 8%;
+  height: 8%;
+  margin: 10px;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.small-icon {
+  width: 30px;
+  height: 30px;
+  opacity: 0.3;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.sdg-logo {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.half-img {
+  width: 35%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.half-img:hover {
+  transform: scale(1.05);
+}
+
+.diagram {
+  transition: transform 0.3s;
+}
+
+.diagram:hover {
+  transform: scale(1.05);
+}
+.profileinfo{
+  justify-content: left;
+  align-items: right;
+  text-align: justify ;
+  margin-top: 20px;
+  padding-left: 35%;
+}
+.contentp{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.119);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  text-align: center; /* Ensure text inside content is centered */
+  align-items: center;
+}
+
+
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.445); }
+  50% { box-shadow: 0 0 20px rgba(66, 139, 139, 0.532); }
+  100% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.41); }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  animation: fadeInModal 0.3s;
+}
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 10% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: left;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: scaleIn 0.3s;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #0ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-220px);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .section {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .section .content {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, li {
+    font-size: 14px;
+  }
+
+  .image-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content {
+    margin: 20% auto;
+    padding: 20px;
+  }
+}
+
+/* Existing Sidebar Styles (Update) */
+/* Ensure sidebar is above background elements */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 255, 255, 0.2), rgba(0, 0, 0, 0.8));
+  padding: 20px;
+  z-index: 2; /* Increase z-index to stay above particles */
+  border-right: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  border-radius: 0 10px 0 0;
+  scrollbar-width: thin;
+  scrollbar-color: #26A69A #1a1a1a;
+}
+
+/* Ensure sections are above particles */
+.section {
+  margin-left: 220px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+  z-index: 1; /* Above particles but below sidebar */
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep particles in the background */
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-220px);
+    z-index: 2;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .section {
+    margin-left: 0;
+  }
+}
+
+.sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: -1;
+}
+
+/* Hide any unintended background text */
+body::before,
+body::after,
+#particles-js::before,
+#particles-js::after {
+  content: none !important; /* Remove any generated text */
+}
+
+/* Ensure sidebar content is the only visible text */
+.sidebar ul {
+  position: relative;
+  z-index: 3; /* Above everything */
+}
+
+.sidebar a {
+  position: relative;
+  z-index: 3;
+}
+
+/* Force sections above background */
+.section {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay to mask background text */
+}
+
+.sdg{
+  width: 5%;
+  height: 10%;
+  position: relative;
+
+}
+.intronifo{
+  display:inline-flex;
+  padding-left: 20%;
+}
+
+.sdg{
+  padding-left: 5px
+}
+
+.visvid{
+  width: 75%;
+  height: 75%;
+  position:inherit;
+  padding-left: 5%;
+}
